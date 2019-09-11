@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<body style="background-image: url({{ url_for('static', filename='img/House.jpg') }}">
+	<form action="{{ url_for('predict')}}" method="post">
+		<h1 style="color:red;" style="font-family:verdana;">House Price Prediction System</h1>
+		<h3>Please enter below details</h3>
+		<input id="userinput1" type="text" name= "CRIM" placeholder="Enter CRIM">	
+		<input id="userinput2" type="text" name= "ZN" placeholder="Enter ZN">
+		<input id="userinput3" type="text" name= "INDUS" placeholder="Enter INDUS">
+		<input id="userinput4" type="text" name= "CHOS" placeholder="Enter CHOS">
+		<input id="userinput5" type="text" name= "NOX" placeholder="Enter NOX">
+		<input id="userinput6" type="text" name= "RM" placeholder="Enter RM">
+		<input id="userinput7" type="text" name= "AGE" placeholder="Enter AGE"><br><br>
+		<input id="userinput8" type="text" name= "DIS" placeholder="Enter DIS">
+		<input id="userinput9" type="text" name= "RAD" placeholder="Enter RAD">
+		<input id="userinput10" type="text" name= "TAX" placeholder="Enter TAX">
+		<input id="userinput11" type="text" name= "PTRATIO" placeholder="Enter PTRATIO">
+		<input id="userinput12" type="text" name= "B" placeholder="Enter B">
+		<input id="userinput13" type="text" name= "LSTAT" placeholder="Enter LSTAT"><br><br>
+		<input type="submit" value="Submit">
+  		<input type="reset">
+	</form>
+	<br>
+	<br>
+	{{ prediction_text }}
+</body>
+</html>
